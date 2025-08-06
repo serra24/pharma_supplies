@@ -161,7 +161,7 @@ body {
     }
 
     th, td {
-      text-align: center;
+   
       padding: 12px;
       border-bottom: 1px solid #ddd;
     }
@@ -209,6 +209,12 @@ body {
       display: block;
       margin: auto;
       font-size: 18px;
+    }
+    .input-row{padding: 6px;
+  border-radius: 6px;
+  border: none;
+  background-color: #F5F5F5;
+
     }
 
     .input-row select, .input-row input {
