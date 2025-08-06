@@ -1,4 +1,4 @@
-import slider2 from '../../../assets/img/Rectangle 34625769.png'
+import slider2 from '../../assets/img/Rectangle 34625769.png'
 const Home = () => {
   return (
     <div>
