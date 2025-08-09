@@ -23,9 +23,9 @@ const AddNew = () => {
         <BreadCrumb title="إضافة فاكس جديد" />
        
 
-        <div className="top-bar d-flex justify-content-between align-items-center">
+        <div className="top-bar d-flex justify-content-between align-items-center col-lg-12 col-md-6 col-sm-3">
             <button
-              className={activeTab === "manual" ? "active" : ""}
+              className={ activeTab === "manual" ? "active" : ""}
               onClick={() => setActiveTab("manual")}
             >
               ادخال يدوي
@@ -37,12 +37,12 @@ const AddNew = () => {
               رفع ملف Excel
             </button>
           </div>
-        <div className=" tablee ">
+        <div className=" tablee  ">
          
           {activeTab === "manual" ? (
-           <section className="section-title">
+   <section className="section-title col-lg-12 col-md-6 col-sm-3" >
     <h5>تعديل الأصناف</h5>
-    <table className="table-container ">
+    <table className="table-container  ">
       <thead>
         <tr>
           <th >الكود</th>
@@ -112,45 +112,24 @@ const AddNew = () => {
             </button>
           </td>
         </tr>
-        <tr>
-          <td >
-            <h6>3781</h6>
-          </td>
-          <td>
-            <h6>ابيتينس أقراص</h6>
-          </td>
-          <td>
-            <h6>6.7</h6>
-          </td>
-          <td>
-            <h6>38</h6>
-          </td>
-          <td>
-            <button className="btn btn-outline-danger">
-              حذف
-              <i className="fa-solid fa-xmark" />
-            </button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h6>3781</h6>
-          </td>
-          <td>
-            <h6>ابيتينس أقراص</h6>
-          </td>
-          <td>
-            <h6>6.7</h6>
-          </td>
-          <td>
-            <h6>38</h6>
-          </td>
-          <td>
-            <button className="btn btn-outline-danger">
-              حذف <i className="fa-solid fa-xmark" />
-            </button>
-          </td>
-        </tr>
+        {/* Input Row */}
+                  <tr className="input-row">
+                    <td>
+                      <input type="text" placeholder="الكود" />
+                    </td>
+                    <td>
+                      <input type="text" placeholder="اسم العنصر" />
+                    </td>
+                    <td>
+                      <input type="number" placeholder="السعر" />
+                    </td>
+                    <td>
+                      <input type="number" placeholder="خصم" />
+                    </td>
+                    <td>
+                      <button className=" add"> &#x2705; إضافة</button>
+                    </td>
+      </tr>
       </tbody>
     </table>
   </section>
