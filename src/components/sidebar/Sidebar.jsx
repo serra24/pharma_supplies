@@ -1,7 +1,12 @@
-// src/components/Sidebar/Sidebar.jsx
+
 import { Form, Link } from 'react-router-dom';
 import slider1 from '../../assets/img/Clip path group.png'
+import { useLang } from '../../context/LanguageContext';
+import { useState } from 'react';
 const Sidebar = () => {
+    const { t,dir } = useLang();
+ const [drawerOpen, setDrawerOpen] = useState(false);
+  const sidebarPosition = dir === "rtl" ? { right: 0 } : { left: 0 };
   return (
     <div style={{
       width: '250px',
@@ -19,19 +24,19 @@ const Sidebar = () => {
       </div>
       <div className="right-side main-sidebar ">
         <a href="/" className="active">
-          <i className="bi bi-house" /> الصفحة الرئيسية
+          <i className="bi bi-house" /> {t.home}
         </a>
         <a href="/AddNew">
-          <i className="bi bi-file-earmark-plus" /> إضافة فاكس جديد
+          <i className="bi bi-file-earmark-plus" /> {t.addFax}
         </a>
         <a href="/Show">
-          <i className="bi bi-card-list" /> عروض الفاكسات
+          <i className="bi bi-card-list" /> {t.showFax}
         </a>
         <a href="/NewPass">
-          <i className="bi bi-key" /> تغيير كلمة المرور
+          <i className="bi bi-key" /> {t.changePassword}
         </a>
         <a href="#" className="logout">
-          <i className="bi bi-box-arrow-right" /> تسجيل الخروج
+          <i className="bi bi-box-arrow-right" /> {t.logout}
         </a>
       </div>
     </div>
