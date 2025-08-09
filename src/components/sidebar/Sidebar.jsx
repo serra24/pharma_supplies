@@ -13,7 +13,7 @@ const Sidebar = () => {
       <div className="container-fluid mt-3">
   <div className="row">
     {/* Sidebar */}
-    <div className="col-md-2">
+    <div className="hight-slider col-md-2">
       <div className="sidebar ">
         <img src={slider1} alt="ekad logo" />
       </div>
@@ -24,10 +24,10 @@ const Sidebar = () => {
         <a href="/AddNew">
           <i className="bi bi-file-earmark-plus" /> إضافة فاكس جديد
         </a>
-        <a href="#">
+        <a href="/Show">
           <i className="bi bi-card-list" /> عروض الفاكسات
         </a>
-        <a href="#">
+        <a href="/NewPass">
           <i className="bi bi-key" /> تغيير كلمة المرور
         </a>
         <a href="#" className="logout">
