@@ -5,8 +5,23 @@
   "changePassword": "تغيير كلمة المرور",
   "logout": "تسجيل الخروج",
   "langArabic": "اللغة العربية",
-  "langEnglish": "English" 
-  
+  "langEnglish": "English" ,
+   "addNewFax": "إضافة فاكس جديد",
+  "manualEntry": "ادخال يدوي",
+  "uploadExcelFile": "رفع ملف Excel",
+  "code": "الكود",
+  "itemName": "أسم العنصر",
+  "price": "السعر",
+  "discount": "خصم",
+  "actions": "اجراءات",
+  "delete": "حذف",
+  "add": "إضافة",
+  "uploadFile": "رفع ملف",
+  "chooseExcelFile": "اختر ملف Excel يحتوي على بيانات التصنيف",
+  "description": "الوصف",
+  "descriptionPlaceholder": "يمكنك كتابة الوصف ...",
+  "todayDate": "تاريخ اليوم",
+  "save": "حفظ"
 
 
 }

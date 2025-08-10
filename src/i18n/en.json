@@ -5,7 +5,24 @@
   "changePassword": "Change Password",
   "logout": "Logout",
   "langArabic": "Arabic",
-  "langEnglish": "English"
+  "langEnglish": "English",
+  
+ "addNewFax": "Add New Fax",
+  "manualEntry": "Manual Entry",
+  "uploadExcelFile": "Upload Excel File",
+  "code": "Code",
+  "itemName": "Item Name",
+  "price": "Price",
+  "discount": "Discount",
+  "actions": "Actions",
+  "delete": "Delete",
+  "add": "Add",
+  "uploadFile": "Upload File",
+  "chooseExcelFile": "Choose an Excel file containing category data",
+  "description": "Description",
+  "descriptionPlaceholder": "You can write the description...",
+  "todayDate": "Today's Date",
+  "save": "Save"
   
 
 }

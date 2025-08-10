@@ -1,25 +1,24 @@
 /* ----------------------------login------- */
-*{
+* {
   margin: 0px;
   padding: 0px;
 }
 body {
   background-color: rgb(223, 229, 243);
 }
-.hii i{
+.hii i {
   font-size: 30px;
-  color: #043A74;
+  color: #043a74;
   text-align: center;
 }
-.hii h6{
+.hii h6 {
   margin: auto;
 }
-
 
 .dropdown-login {
   color: #343a4099;
   font-size: 20px;
- position: absolute;
+  position: absolute;
   height: 15;
   top: 30px;
   right: 90%;
@@ -38,17 +37,17 @@ body {
   color: rgb(44, 44, 113);
 }
 
-.loginn a{
+.loginn a {
   text-decoration: none;
-  
+
   color: white;
-  background-color: #043A74;
-display: inherit;
+  background-color: #043a74;
+  display: inherit;
   text-align: center;
   /* width: 100%; */
   border-radius: 5px;
   margin-top: 50px;
-border: none;
+  border: none;
   padding: 15px;
 }
 
@@ -62,9 +61,8 @@ border: none;
   border: none;
   padding: 15px;
 }
-.input{
+.input {
   margin-top: 50px;
-  
 }
 
 .input i {
@@ -83,7 +81,7 @@ border: none;
   box-shadow: 0px 0px 24px 0px #343a401a;
   border-radius: 20px;
 }
- #lang {
+#lang {
   position: absolute;
   height: 10px;
   top: 30px;
@@ -114,9 +112,8 @@ form input {
 #result {
   background-color: red;
 }
-.form-control{
+.form-control {
   padding: 30px;
-
 }
 /* =================================Login padge=========================== */
 
@@ -314,7 +311,7 @@ body {
   direction: ltr;
   padding: 20px;
   margin-top: 18px;
-  border-radius: 15px;
+  border-radius: 20px;
   background-color: #fff;
   margin-bottom: 20px;
 }
@@ -432,9 +429,10 @@ td {
 }
 .add {
   background-color: white;
-  border: 1px solid #168000;
+  border: 1px solid #4caf504d;
   padding: 8px;
   border-radius: 7px;
+  color: #4caf50;
 }
 
 .add-btn {
@@ -463,26 +461,41 @@ td {
 }
 .end {
   display: flex;
-  align-items: center;
-  gap: 450px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  align-items: flex-start;
+  gap: 2rem; /* Flexible spacing */
   margin-top: 20px;
   clear: both;
 }
+
+.end > div {
+  flex: 1 1 250px; /* Grow, shrink, min-width 250px */
+}
+
 .end label {
-  padding-bottom: 10px;
+  display: block;
+  margin-bottom: 8px;
 }
-.end textarea {
-  width: 300%;
-  border: none;
-  border-radius: 8px;
-  height: 5vh;
-}
+
+.end textarea,
 .end input {
-  width: 420%;
+  width: 100%; /* Full width of parent */
   border: none;
   border-radius: 8px;
   height: 5vh;
+  min-height: 40px; /* Ensure touch-friendly */
+  padding: 8px;
+  box-sizing: border-box;
 }
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .end {
+    flex-direction: column; /* Stack vertically */
+    gap: 1rem;
+  }
+}
+
 
 .save-btn {
   background-color: #0c2f67;
@@ -504,18 +517,37 @@ td {
   border: 1px solid #ccc;
 }
 .input-row input {
-  padding: 6px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  background-color: #f5f5f5;
+  padding-block: 6px;           
+  padding-inline: 12px;         
+  border: 1px solid #fff;
+  background: #f5f5f5;
+  width: 190px;
+  border-radius: 20px;
+ 
+}
+[dir="ltr"] .input-row input {
+  direction: ltr;
+}
+
+
+[dir="rtl"] .input-row input {
+  direction: rtl;
 }
 /* --------------------------------- */
 body {
-  font-family: Arial, sans-serif;
+ 
   background-color: #f5f5f5;
   padding: 40px;
 }
+/* LTR font */
+[dir="ltr"] body {
+  font-family: 'Montserrat', sans-serif;
+}
 
+/* RTL font */
+[dir="rtl"] body {
+  font-family: 'Almarai', sans-serif;
+}
 .upload-container {
   border: 2px dashed #ccc;
   background-color: #fff;
@@ -524,7 +556,7 @@ body {
   border-radius: 8px;
   max-width: 600px;
   margin: auto;
-  direction: rtl;
+  /* direction: rtl; */
 }
 
 .upload-container img {
@@ -624,10 +656,14 @@ thead {
 th,
 td {
   padding: 12px;
+  
+}
+tbody td {
+  border-bottom: 1px solid #EEEAF5;
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 /* .actions button {
@@ -783,7 +819,7 @@ tr:nth-child(even) {
 .section-title {
   text-align: right;
   font-weight: bold;
-  margin: 15px;
+  /* margin: 15px; */
 }
 /* -------------------------------------------- */
 
@@ -793,8 +829,8 @@ tr:nth-child(even) {
 }
 
 body {
-  direction: rtl;
-  text-align: right;
+  /* direction: rtl; */
+  /* text-align: right; */
   background-color: hsl(0deg 0% 96.08%);
   padding: 5px 20px;
 }
