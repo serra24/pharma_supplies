@@ -38,7 +38,7 @@ const Edit = () => {
   {/* End information section  */}
   {/* Start table section  */}
   <section className="section-title flex: 1 1 0%;">
-    <h5>تعديل الأصناف</h5>
+    <h5 className="mt-3 mb-3">تعديل الأصناف</h5>
     <table className="table-container ">
       <thead>
         <tr>
