@@ -13,9 +13,16 @@ const Show = () => {
       <input type="text" placeholder=" يمكنك البحث برقم العرض أو الوصف." /><i class="fa-solid fa-magnifying-glass"></i>
     </div>
     <div className="datee">
-        <input type="date" id="date" defaultValue="2025-08-04" placeholder="من تاريخ" />
+      <div className="f-t">
+        <label htmlFor="" id="date" >  من تاريخ</label>
+        <input type="date" id="date"  placeholder=":من تاريخ" />
+      </div>
+       <div className="f-t">
+           <label htmlFor="" id="date">   الي تاريخ </label>
+     <input type="date" id="date"  placeholder=":الي تاريخ" />
+       </div>
 
-     <input type="date" id="date" defaultValue="2025-08-04" placeholder="الي تاريخ" />
+         
     </div>
      
 
@@ -42,7 +49,7 @@ const Show = () => {
         <td>عرض فاکس للأدوية الأساسية</td>
         <td className="actions">
           <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  تفاصيل</a>
-<a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  تعديل </a>        </td>
+<a href="/Edit"  className="edit"><i class=" con fa-solid fa-pen-to-square"></i>  تعديل </a>        </td>
       </tr>
       <tr>
         <td>3718</td>

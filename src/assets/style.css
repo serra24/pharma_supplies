@@ -2,6 +2,10 @@
 * {
   margin: 0px;
   padding: 0px;
+  font-family: "Almarai", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
 }
 body {
   background-color: rgb(223, 229, 243);
@@ -63,10 +67,16 @@ body {
 }
 .input {
   margin-top: 50px;
+  
 }
 
-.input i {
-  bottom: 7px;
+.input .iconn {
+  bottom: 16px;
+  font-size: 17px;
+  position: absolute;
+}
+.input-login{
+  padding: 10px;
 }
 .right-side- {
   background-color: white;
@@ -112,8 +122,9 @@ form input {
 #result {
   background-color: red;
 }
-.form-control {
+.form-control{
   padding: 30px;
+
 }
 /* =================================Login padge=========================== */
 
@@ -308,12 +319,18 @@ body {
 }
 .header {
   width: 100%;
-  direction: ltr;
+  /* direction: ltr; */
   padding: 20px;
   margin-top: 18px;
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 20px;
+}
+.header:dir(rtl){
+  direction: ltr; 
+}
+.header:dir(ltr){
+  direction: rtl; 
 }
 .carousel-inner {
   border-radius: 20px;
@@ -329,9 +346,19 @@ body {
 .adding {
   display: flex;
   flex-direction: column;
-  display: flex;
-  flex-direction: column;
+
   margin-top: -30px;
+}
+.adding a {
+  display: block;
+  text-align: center;
+}
+.adding h6{
+  color: #043A74;
+
+}
+.box i {
+  color: #043A74;
 }
 
 .adding h6 {
@@ -610,6 +637,12 @@ body {
   display: flex;
   gap: 20px;
 }
+ .f-t label{
+  margin: 10px;
+  color: 
+  #276cc7;
+
+}
 
 .filters input::placeholder {
   text-align: right;
@@ -698,6 +731,7 @@ tbody tr:nth-child(even) {
   background-color: white;
   font-size: 14px;
   align-self: start;
+
 }
 
 .btn-details {
@@ -817,7 +851,7 @@ tr:nth-child(even) {
 }
 
 .section-title {
-  text-align: right;
+  /* text-align: right; */
   font-weight: bold;
   /* margin: 15px; */
 }
@@ -834,7 +868,17 @@ body {
   background-color: hsl(0deg 0% 96.08%);
   padding: 5px 20px;
 }
+/* LTR layout */
+[dir="ltr"] body {
+  direction: ltr;
+  text-align: left;
+}
 
+/* RTL layout */
+[dir="rtl"] body {
+  direction: rtl;
+  text-align: right;
+}
 /* Start infirmation section  */
 
 .information {
@@ -931,17 +975,18 @@ body {
  /* -------------------responsev---------------- */
 
 @media (max-width: 1200px) {
+  /* --------home----------- */
   .text p {
     font-size: 15px;
-    line-height: 25px;
-    margin-top: 5px;
+    line-height: 15px;
+   
   }
   .text h4 {
-    margin-top: -3x;
+  
     font-size: 15px;
   }
   .main-img img {
-    height: 60vh;
+    height: 200px;
   }
   .sidebar {
     width: 100px;
@@ -952,5 +997,40 @@ body {
   .main-sidebar {
     width: 150px;
   }
-  /* --------------------------- */
+  /* -----------log in---------------- */
+ .right-side  img {
+  width: 400px;
+  height: 50vh;
+ }
+/* ----------------------------------------- */
 }
+
+@media(max-width: 1220px){
+  .datee input{
+    
+              margin-top: 30px; ;
+  }
+
+}
+@media(max-width: 1026px){
+  .actions a{
+    display: flex;
+    margin-right: 20px;
+  }
+
+}
+@media(max-width: 1375px){
+.datee input{
+  margin-top: 30px;
+}
+
+
+}
+@media(max-width: 851px){
+  .f-t label{
+ margin: 10px;
+
+}
+}
+
+
