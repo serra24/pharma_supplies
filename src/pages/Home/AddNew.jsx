@@ -40,9 +40,8 @@ const AddNew = () => {
         <div className=" tablee  ">
          
           {activeTab === "manual" ? (
-   <section className="section-title col-lg-12 col-md-6 col-sm-3" >
-    <h5>تعديل الأصناف</h5>
-    <table className="table-container  ">
+   <section className="section-title " >
+    <table className="table-container   ">
       <thead>
         <tr>
           <th >الكود</th>
