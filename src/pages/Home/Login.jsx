@@ -1,7 +1,13 @@
-import slider4 from "../../assets/img/Rectangle 20.png";
+import { useNavigate } from "react-router-dom";
+
 const Login = () => {
   
+  const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    navigate("/"); 
+  };
   return (
     <div>
         <>
@@ -24,7 +30,7 @@ const Login = () => {
     <div className="custom-container ">
       <div className="right-side ">
         <div>
-          <img id="image0_2050_9" src={slider4} />
+          <img id="image0_2050_9" src="./img/Slider/image_slider1.svg" />
         </div>
       </div>
       <div className="left-side ">
@@ -37,7 +43,10 @@ const Login = () => {
             </div>
           </div>
           <h5 id="result" />
-          <form method="post" action="" onsubmit=" return validatdata()">
+          <form method="post" action="" 
+          // onsubmit=" return validatdata()"
+          onSubmit={handleSubmit}
+          >
             <div className="input position-relative">
               <label className="put" htmlFor="">
                 البريد الالكتروني
