@@ -42,7 +42,7 @@ const Home = () => {
           <div class="slids">
             <div className="row g-3">
               <div className="col-md-6">
-                <div className="card-box ">
+                <div className="box card-box ">
                     <i
                       style={{ fontSize: "35px",position: "relative",top: "10px" }}
  
@@ -52,17 +52,18 @@ const Home = () => {
                    
                     <h6 >إضافة فاكس جديد </h6>
                   <p className="text-muted ">إنشاء فاكس جديد</p>
-                  </div>
-                    
-                  
                   <a className=" botton" href="/AddNew">
                     إنشاء فاكس جديد
                   </a>
+                  </div>
+                    
+                  
+                  
                 </div>
               </div>
 
               <div className="col-md-6">
-                <div className="card-box ">
+                <div className="box card-box ">
                    <i
                      style={{ fontSize: "35px",position: "relative",top: "10px" }}
                       class="fa-solid fa-newspaper "
@@ -71,12 +72,14 @@ const Home = () => {
                     عروض الفاكسات{" "}
                    
                   </h6>
-                  <p className="text-muted">استعراض جميع عروض الفاكسات</p></div>
-                  <div className="bottonn">
-                     <a className="botton" href="/show">
+                  <p className="text-muted">استعراض جميع عروض الفاكسات</p>
+                    <a className="botton" href="/show">
                     {" "}
                     عروض الفاكسات
-                  </a></div>
+                  </a>
+                  </div>
+                  
+                   
                  
                 </div>
               </div>

@@ -2,6 +2,10 @@
 *{
   margin: 0px;
   padding: 0px;
+  font-family: "Almarai", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+
 }
 body {
   background-color: rgb(223, 229, 243);
@@ -65,10 +69,16 @@ border: none;
 .input{
   margin-top: 50px;
   
+
 }
 
-.input i {
-  bottom: 7px;
+.input .iconn {
+  bottom: 16px;
+  font-size: 17px;
+  position: absolute;
+}
+.input-login{
+  padding: 10px;
 }
 .right-side- {
   background-color: white;
@@ -114,10 +124,7 @@ form input {
 #result {
   background-color: red;
 }
-.form-control{
-  padding: 30px;
 
-}
 /* =================================Login padge=========================== */
 
 .right-login {
@@ -332,9 +339,19 @@ body {
 .adding {
   display: flex;
   flex-direction: column;
-  display: flex;
-  flex-direction: column;
+
   margin-top: -30px;
+}
+.adding a {
+  display: block;
+  text-align: center;
+}
+.adding h6{
+  color: #043A74;
+
+}
+.box i {
+  color: #043A74;
 }
 
 .adding h6 {
@@ -578,6 +595,12 @@ body {
   display: flex;
   gap: 20px;
 }
+ .f-t label{
+  margin: 10px;
+  color: 
+  #276cc7;
+
+}
 
 .filters input::placeholder {
   text-align: right;
@@ -662,6 +685,7 @@ tbody tr:nth-child(even) {
   background-color: white;
   font-size: 14px;
   align-self: start;
+
 }
 
 .btn-details {
@@ -895,17 +919,18 @@ body {
  /* -------------------responsev---------------- */
 
 @media (max-width: 1200px) {
+  /* --------home----------- */
   .text p {
     font-size: 15px;
-    line-height: 25px;
-    margin-top: 5px;
+    line-height: 15px;
+   
   }
   .text h4 {
-    margin-top: -3x;
+  
     font-size: 15px;
   }
   .main-img img {
-    height: 60vh;
+    height: 200px;
   }
   .sidebar {
     width: 100px;
@@ -916,5 +941,40 @@ body {
   .main-sidebar {
     width: 150px;
   }
-  /* --------------------------- */
+  /* -----------log in---------------- */
+ .right-side  img {
+  width: 400px;
+  height: 50vh;
+ }
+/* ----------------------------------------- */
 }
+
+@media(max-width: 1220px){
+  .datee input{
+    
+              margin-top: 30px; ;
+  }
+
+}
+@media(max-width: 1026px){
+  .actions a{
+    display: flex;
+    margin-right: 20px;
+  }
+
+}
+@media(max-width: 1375px){
+.datee input{
+  margin-top: 30px;
+}
+
+
+}
+@media(max-width: 851px){
+  .f-t label{
+ margin: 10px;
+
+}
+}
+
+

@@ -5,7 +5,11 @@ const Edit = () => {
     <div>
       <>
        
-        <BreadCrumb title="لرجوع إلي الفاكسات" />
+        <BreadCrumb title="" />
+        <div className="back">
+                    <a href="/Show">الرجوع الي الفكسات</a>
+
+          </div>
  
  <>
   

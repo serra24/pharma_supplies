@@ -8,7 +8,7 @@ const newpass = () => {
     <div>
         <>
         <BreadCrumb title=" تغيير كلمة المرور" />
-        <div className="password-change-form">
+        <div className="password-change-form col-lg-6 col-md-4 col-sm-2">
   <h2>
     <i class="fa-solid fa-lock"></i>تغيير كلمة المرور 
   </h2>
