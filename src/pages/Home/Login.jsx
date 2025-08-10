@@ -23,6 +23,11 @@ const Login = () => {
   <div>
     <div className="custom-container ">
      
+      <div className="right-side ">
+        <div>
+          <img id="image0_2050_9" src="./img/Slider/image_slider1.svg" />
+        </div>
+      </div>
       <div className="left-side ">
         <div>
           <div className="text">
@@ -33,7 +38,10 @@ const Login = () => {
             </div>
           </div>
           <h5 id="result" />
-          <form method="post" action="" onsubmit=" return validatdata()">
+          <form method="post" action="" 
+          // onsubmit=" return validatdata()"
+          onSubmit={handleSubmit}
+          >
             <div className="input position-relative">
               <label className="put" htmlFor="">
                 البريد الالكتروني
