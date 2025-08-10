@@ -1,15 +1,31 @@
 /* ----------------------------login------- */
-
+*{
+  margin: 0px;
+  padding: 0px;
+}
 body {
   background-color: rgb(223, 229, 243);
 }
+.hii i{
+  font-size: 30px;
+  color: #043A74;
+  text-align: center;
+}
+.hii h6{
+  margin: auto;
+}
 
-.lang {
+
+.dropdown {
   color: #343a4099;
   font-size: 20px;
-  position: relative;
-  top: 50px;
-  left: 50px;
+ position: absolute;
+  height: 15;
+  top: 30px;
+  right: 90%;
+  opacity: 1;
+  color: #343a4099;
+  width: 120px;
 }
 .container {
   display: flex;
@@ -22,8 +38,25 @@ body {
   color: rgb(44, 44, 113);
 }
 
+.loginn a{
+  text-decoration: none;
+  
+  color: white;
+  background-color: #043A74;
+display: inherit;
+  text-align: center;
+  /* width: 100%; */
+  border-radius: 5px;
+  margin-top: 50px;
+border: none;
+  padding: 15px;
+}
+
 .bottom {
-  margin-top: 30px;
+  display: flex;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 50px;
   background-color: #043a74;
   color: white;
   border: none;
@@ -31,6 +64,7 @@ body {
 }
 .input{
   margin-top: 50px;
+  
 }
 
 .input i {
@@ -49,9 +83,9 @@ body {
   box-shadow: 0px 0px 24px 0px #343a401a;
   border-radius: 20px;
 }
-#lang {
+ #lang {
   position: absolute;
-  height: 15;
+  height: 10px;
   top: 30px;
   left: 30px;
   opacity: 1;
@@ -80,7 +114,10 @@ form input {
 #result {
   background-color: red;
 }
+.form-control{
+  padding: 30px;
 
+}
 /* =================================Login padge=========================== */
 
 .right-login {

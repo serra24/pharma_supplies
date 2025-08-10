@@ -22,18 +22,14 @@ const Login = () => {
   </div>
   <div>
     <div className="custom-container ">
-      <div className="right-side ">
-        <div>
-          <img id="image0_2050_9" src={slider4} />
-        </div>
-      </div>
+     
       <div className="left-side ">
         <div>
           <div className="text">
             <img className="imge" src="img/Vector.svg" alt="" />
-            <div>
-              <h3>تسجيل الدخول</h3>
-              <h6>مرحبًا بك! الرجاء تسجيل الدخول للمتابعة</h6>
+            <div className="hii">
+              <i class=" fa-solid fa-user"></i><h3>تسجيل الدخول</h3>
+              <h6 className="text-muted">مرحبًا بك! الرجاء تسجيل الدخول للمتابعة</h6>
             </div>
           </div>
           <h5 id="result" />
@@ -62,13 +58,20 @@ const Login = () => {
                 className="form-control"
               />
             </div>
-            <input 
+            {/* <input 
              
               type="submit"
-              defaultValue="تسجيل الدخول"
-              className="bottom   btn-block"
-            />
+              value="تسجيل الدخول" 
+              className="bottom btn-block"
+            /> */}
+             <div className="loginn"><a className="" href="/Home">تسجيل الدخول</a></div>
+            
           </form>
+        </div>
+      </div>
+       <div className="right-side ">
+        <div>
+          <img id="image0_2050_9" src={slider4} />
         </div>
       </div>
     </div>
