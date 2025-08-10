@@ -1,7 +1,13 @@
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   
+  const navigate = useNavigate();
 
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
+    navigate("/"); 
+  };
   return (
     <div>
         <>
@@ -37,7 +43,10 @@ const Login = () => {
             </div>
           </div>
           <h5 id="result" />
-          <form method="post" action="" onsubmit=" return validatdata()">
+          <form method="post" action="" 
+          // onsubmit=" return validatdata()"
+          onSubmit={handleSubmit}
+          >
             <div className="input position-relative">
               <label className="put" htmlFor="">
                 البريد الالكتروني
