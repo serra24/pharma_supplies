@@ -16,7 +16,7 @@ body {
 }
 
 
-.dropdown {
+.dropdown-login {
   color: #343a4099;
   font-size: 20px;
  position: absolute;
@@ -24,7 +24,7 @@ body {
   top: 30px;
   right: 90%;
   opacity: 1;
-  color: #343a4099;
+
   width: 120px;
 }
 .container {
