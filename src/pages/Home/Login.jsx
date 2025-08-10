@@ -1,4 +1,4 @@
-
+import slider4 from "../../assets/img/Rectangle 20.png";
 const Login = () => {
   
 
@@ -24,7 +24,7 @@ const Login = () => {
     <div className="custom-container ">
       <div className="right-side ">
         <div>
-          <img id="image0_2050_9" src="./img/Slider/image_slider1.svg" />
+          <img id="image0_2050_9" src={slider4} />
         </div>
       </div>
       <div className="left-side ">
