@@ -35,7 +35,7 @@ const Sidebar = () => {
         <a href="/NewPass">
           <i className="bi bi-key" /> {t.changePassword}
         </a>
-        <a href="#" className="logout">
+        <a href="/Login" className="logout">
           <i className="bi bi-box-arrow-right" /> {t.logout}
         </a>
       </div>

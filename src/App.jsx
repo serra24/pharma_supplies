@@ -6,6 +6,7 @@ import Show from './pages/Home/Show';
 import NewPass from './pages/Home/NewPass';
 import Details from './pages/Home/Details';
 import Edit from './pages/Home/Edit';
+import Login from './pages/Home/Login';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="newpass" element={<NewPass/>}/>
           <Route path="Details" element={<Details/>}/>
           <Route path="Edit" element={<Edit/>}/>
+          <Route index element={<Login/>} />
         </Route>
       </Routes>
     </BrowserRouter>

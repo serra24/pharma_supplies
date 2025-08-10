@@ -6,7 +6,7 @@ import ar from '../i18n/ar.json';
 const LanguageContext = createContext();
 
 const translations = { en, ar };
-const LOCAL_KEY = 'nwz_lang';
+const LOCAL_KEY = 'lang';
 
 export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState('ar');
