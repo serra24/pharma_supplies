@@ -36,10 +36,11 @@ const AddNew = () => {
            {t.uploadExcelFile}
           </button>
         </div>
-        <div className=" tablee">
+        
           {activeTab === "manual" ? (
-            <section className="section-title ">
-              <table className="table-container   ">
+            
+            <section className="section-title  col-lg-12 col-md-10 col-sm-6  flex: 1 1 0%; " style={{overflowX:"hidden"}}>
+              <table className= "table-container  ">
                 <thead>
                   <tr>
                     <th>{t.code}</th>
@@ -133,7 +134,7 @@ const AddNew = () => {
           ) : (
             // Excel Rows
             // excelData.map((item, index) => (
-            <div
+            <div className="move"
               style={{
                 flex: 1,
                 border: "2px dashed #ccc",
@@ -221,7 +222,7 @@ const AddNew = () => {
             </div>
             // ))
           )}
-        </div>
+        
         <div class="end">
           <div>
             <label htmlFor="description">{t.description}</label>

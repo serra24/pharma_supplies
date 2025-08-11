@@ -567,14 +567,14 @@ body {
   padding: 40px;
 }
 /* LTR font */
-[dir="ltr"] body {
+/* [dir="ltr"] body {
   font-family: 'Montserrat', sans-serif;
-}
+} */
 
 /* RTL font */
-[dir="rtl"] body {
+/* [dir="rtl"] body {
   font-family: 'Almarai', sans-serif;
-}
+} */
 .upload-container {
   border: 2px dashed #ccc;
   background-color: #fff;
@@ -1030,6 +1030,15 @@ body {
   .f-t label{
  margin: 10px;
 
+}
+}
+@media(max-width: 857px){
+.move{
+  margin: 30px;
+}
+.top-bar .active{
+  width: 50%;
+  font-size: 15px;
 }
 }
 

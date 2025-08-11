@@ -75,8 +75,7 @@ const Login = () => {
                     </div>
                   <div className="input position-relative ">
                       <label className="put" htmlFor="">
-                        البريد الالكتروني
-                      </label>
+                                   كلمه المرور          </label>
                       <br />
                       <input
                         className="input-log form-control p-2"
@@ -88,7 +87,7 @@ const Login = () => {
                     </div>
                     <input
                       type="submit"
-                      value="كلمه المرور"
+                      value="تسجيل الدخول"
                       className="bottom   btn-block"
                     />
                   </form>
