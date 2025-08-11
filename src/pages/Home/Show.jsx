@@ -37,10 +37,10 @@ const Show = () => {
   <table>
     <thead>
       <tr>
-        <th>رقم العرض</th>
-        <th>التاريخ</th>
-        <th>الوصف</th>
-        <th>إجراءات</th>
+        <th>{t.code} </th>
+        <th>{t.Date}</th>
+        <th> {t.itemName} </th>
+        <th> {t.procedures}</th>
       </tr>
     </thead>
     <tbody>
