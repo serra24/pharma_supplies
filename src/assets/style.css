@@ -265,7 +265,7 @@ body {
   left: auto;
 }
 .sidebar {
-  min-height: 20vh;
+  /* min-height: 20vh; */
   background-color: #ffffff;
   border-radius: 15px;
   padding: 40px 77px 40px 77px;
@@ -284,10 +284,11 @@ body {
   /* padding-bottom: 20px; */
 }
 /* Default link + icon color */
-.sidebar a,
+
+/* .sidebar a, */
 .main-sidebar a {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   text-decoration: none;
   color: #343a4099; /* inactive */
 }
