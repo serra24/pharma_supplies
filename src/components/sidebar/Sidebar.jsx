@@ -10,7 +10,6 @@ const Sidebar = () => {
   return (
     <div style={{
       width: '250px',
-
       color: 'white',
       padding: '20px',
       minHeight: '50vh'
