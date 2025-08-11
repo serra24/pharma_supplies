@@ -9,8 +9,8 @@ const Home = () => {
     <div>
       <>
         {/* Main Content */}
-        <div className="content " style={{ width: "100 %" }}>
-          <BreadCrumb title="الصفحة الرئيسية" />
+        <div >
+          <BreadCrumb title={t.home} />
           {/* Carousel */}
           <div
             id="mainCarousel"
@@ -41,53 +41,46 @@ const Home = () => {
             </div>
           </div>
           {/* Action Cards */}
-          <div class="slids">
-            <div className="row g-3">
-              <div className="col-md-6">
-                <div className="box card-box ">
-                    <i
-                      style={{ fontSize: "35px",position: "relative",top: "10px" }}
- 
-                      class="fa-solid fa-file-circle-plus"
-                    ></i>
-                  <div className="adding">
-                   
-                    <h6 >{t.Addanewfax} </h6>
-                  <p className="text-muted ">{t.Createanewfax}</p>
-                  <a className=" botton w-80" href="/AddNew">
-                        {t.Createanewfax}
-                  </a>
-                  </div>
-                    
-                  
-                  
-                </div>
-              </div>
-
-              <div className="col-md-6">
-                <div className="box card-box ">
-                   <i
-                     style={{ fontSize: "35px",position: "relative",top: "10px" }}
-                      class="fa-solid fa-newspaper "
-                    ></i>
-                    <div className="adding">
-                     <h6> {t.Faxoffers} {" "}
-                   
-                  </h6>
-                  <p className="text-muted"> {t.Viewallfaxoffers} </p>
-                    <a className="botton" href="/show">
-                    {" "}
-                    {t.Faxoffers} 
-                  </a>
-                  </div>
-                  
-                   
-                 
-                </div>
-              </div>
-              
-            </div>
+      <div className="slids">
+  <div className="row g-3">
+    <div className="col-12 col-md-6">
+      <div className="box card-box">
+        <i
+          style={{ fontSize: "35px", position: "relative", top: "10px" }}
+          className="fa-solid fa-file-circle-plus"
+        ></i>
+        <div className="adding">
+          <h6>{t.Addanewfax}</h6>
+          <p className="text-muted">{t.Createanewfax}</p>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <a className="botton w-80" href="/AddNew">
+              {t.Createanewfax}
+            </a>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="col-12 col-md-6">
+      <div className="box card-box">
+        <i
+          style={{ fontSize: "35px", position: "relative", top: "10px" }}
+          className="fa-solid fa-newspaper"
+        ></i>
+        <div className="adding">
+          <h6>{t.Faxoffers}</h6>
+          <p className="text-muted">{t.Viewallfaxoffers}</p>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <a className="botton" href="/show">
+              {t.Faxoffers}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </>
     </div>

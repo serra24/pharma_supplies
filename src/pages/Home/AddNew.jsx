@@ -20,6 +20,7 @@ const AddNew = () => {
   return (
     <div>
       <>
+        <div >
         <BreadCrumb title={t.addNewFax} />
 
         <div className="top-bar d-flex justify-content-between align-items-center col-lg-12 col-md-6 col-sm-3">
@@ -40,7 +41,7 @@ const AddNew = () => {
         {activeTab === "manual" ? (
           <section
             className="section-title  col-lg-12 col-md-10 col-sm-6  flex: 1 1 0%; "
-            style={{ overflowX: "hidden" }}
+           
           >
             <table className="table-container  ">
               <thead>
@@ -258,6 +259,7 @@ const AddNew = () => {
           id="savee"
           value={t.save}
         />
+        </div>
       </>
     </div>
   );
