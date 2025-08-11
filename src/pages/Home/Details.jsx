@@ -1,12 +1,14 @@
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
+import { useLang } from "../../context/LanguageContext";
 const Details = () => {
+   const { t } = useLang();
   return (
     <div>
       <>
         <>
           <BreadCrumb title="" />
           <div className="back">
-                    <a href="/Show">الرجوع الي الفكسات</a>
+                    <a href="/Show">{t.BacktoFaxes} <i class="fa-solid fa-caret-right"></i> </a>
 
           </div>
 
@@ -15,34 +17,34 @@ const Details = () => {
     <div className="container-fluid">
       <div className="row">
         <div className="col-12">
-          <h4>تعديل الفاكس رقم 3718</h4>
+          <h4>{t.ModifyFaxNumber3781}</h4>
         </div>
         <div className="col-lg-3 col-md-4 ">
-          <h6>رقم عرض الفاكس:</h6>
+          <h6> {t.Faxdisplaynumber}</h6>
           <h5 className="number-fax">3718</h5>
         </div>
         <div className="col-lg-3 col-md-4 ">
-          <h6>التاريخ:</h6>
+          <h6>{t.Date}:</h6>
           <h5>2-8-2025</h5>
         </div>
         <div className="col-lg-3 col-md-12">
-          <h6>الوصف:</h6>
-          <h5 className="discription-information">عرض فاكس للادويه الأساسيه</h5>
+          <h6>  {t.Description} </h6>
+          <h5 className="discription-information">{t.Faxdisplayofessentialmedicines}</h5>
         </div>
       </div>
     </div>
   </section>
   {/* End information section  */}
 
-          <div className="section-title">تفاصيل الأصناف</div>
+          <div className="section-title m-3">{t.Itemdetails} </div>
           <div className="table-container">
             <table>
               <thead>
                 <tr>
-                  <th>الكود</th>
-                  <th>اسم العنصر</th>
-                  <th>السعر</th>
-                  <th>خصم</th>
+                  <th>{t.code}</th>
+                  <th>{t.itemName}</th>
+                  <th>{t.price}</th>
+                  <th>{t.discount}</th>
                 </tr>
               </thead>
               <tbody>

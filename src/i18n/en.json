@@ -22,7 +22,40 @@
   "description": "Description",
   "descriptionPlaceholder": "You can write the description...",
   "todayDate": "Today's Date",
-  "save": "Save"
+  "save": "Save",
+  "Date":"Date",
+  "Faxoffers":"Fax offers",
+  "Viewallfaxoffers":"View all fax offers",
+  "Addanewfax":"Addanewfax",
+  "Createanewfax":"Createanewfax",
+  "MedicinesPortalDevelopedbyEkad":"MedicinesPortal-DevelopedbyEkad",
+  "Fromdate":"From date",
+  "todate":"to date",
+  "details":"details",
+  "edite":"edite",
+  "BacktoFaxes":"BacktoFaxes",
+  "ModifyFaxNumber3781":"Modify Fax Number.3781",
+  "Faxdisplaynumber":"Fax display number",
+  "Description":"Description",
+  "Faxdisplayofessentialmedicines":"Fax display of essential medicines",
+  "Itemdetails":"Item details",
+  "procedures":"procedures",
+  "all":"Through its pharmaceutical portal, Ekad offers a smart platform that supports pharmaceutical companies and distributors in managing pricing and follow-up processes with professionalism and ease.",
+  "search":"You can search by show number or description.",
+  "login":"log in",
+  "changepassword":"change password",
+  "CurrentPassword":"Current Password",
+  "NewPassword":"New Password",
+  "Confirmnewpassword":"Confirmnew password",
+  "Save":"Save modifications",
+  "welcome":"Welcome! Please log in to continue.",
+    "Email":"E-mail",
+      "password":"password"
+
+
+  
+  
+
   
 
 }

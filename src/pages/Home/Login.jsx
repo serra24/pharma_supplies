@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useLang } from "../../context/LanguageContext";
 
 const Login = () => {
+
   const navigate = useNavigate();
   function handleSubmit(e) {
     e.preventDefault();
@@ -47,9 +48,9 @@ const Login = () => {
                     <div className="hii">
                       {/* {t.Login} */}
                       <i class="fa-solid fa-user"></i>
-                      <h3>تسجيل الدخول </h3>
+                      <h3>{t.login}</h3>
                       <h6 className=" text-muted">
-                        مرحبًا بك! الرجاء تسجيل الدخول للمتابعة
+                        {t.welcome}
                       </h6>
                     </div>
                   </div>
@@ -62,8 +63,7 @@ const Login = () => {
                   >
                     <div className="input position-relative ">
                       <label className="put" htmlFor="">
-                        البريد الالكتروني
-                      </label>
+                              {t.Email}                      </label>
                       <br />
                       <input
                         className="input-log form-control p-2"
@@ -75,7 +75,7 @@ const Login = () => {
                     </div>
                   <div className="input position-relative ">
                       <label className="put" htmlFor="">
-                                   كلمه المرور          </label>
+                                   {t.password}         </label>
                       <br />
                       <input
                         className="input-log form-control p-2"
@@ -87,7 +87,7 @@ const Login = () => {
                     </div>
                     <input
                       type="submit"
-                      value="تسجيل الدخول"
+                      value={t.login}
                       className="bottom   btn-block"
                     />
                   </form>

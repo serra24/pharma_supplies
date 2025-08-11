@@ -21,7 +21,44 @@
   "description": "الوصف",
   "descriptionPlaceholder": "يمكنك كتابة الوصف ...",
   "todayDate": "تاريخ اليوم",
-  "save": "حفظ"
+  "save": "حفظ",
+  "Date":"التاريخ",
+  "Faxoffers":"عروض الفاكسات",
+  "Viewallfaxoffers": "استعراض جميع عروض الفاكسات",
+  "Addanewfax":"إضافة فاكس جديد",
+  "Createanewfax":"انشاء فاكس جديد",
+  "MedicinesPortalDevelopedbyEkad":"بورتال الأدوية - من تطوير شركة إيكاد",
+  "Fromdate":"من تاريخ",
+  "todate":"الي تاريخ",
+  "details":"تفاصيل",
+  "edite":"تعديل",
+  "BacktoFaxes":"الرجوع إلى الفاكسات",
+  "ModifyFaxNumber3781":"تعديل الفاكس رقم 3781",
+  "Faxdisplaynumber":"رقم عرض الفاكس",
+  "Description":"الوصف",
+  "Faxdisplayofessentialmedicines":"عرض فاكس للادويه الأساسيه",
+  "Itemdetails":"تفاصيل الاصناف" ,
+  "procedures":"اجراءات",
+  "all":"تُقدم شركة إيكاد من خلال بورتال الأدوية منصة رقمية ذكية تدعم شركات الأدوية والموزعين في إدارة عمليات التسعير والمتابعة بكل احترافية وسهولة.",
+  "search" :" يمكنك البحث برقم العرض أو الوصف.",
+  "login":"تسجيل الدخول",
+  "changepassword":"تغيير كلمه المرور",
+  "CurrentPassword":"كلمة المرور الحاليه",
+  "NewPassword":"كلمة المرور الجديده",
+  "Confirmnewpassword":"تأكيد كلمة المرور الجديده",
+  "Save":"حفظ التعديلات",
+  "welcome":"مرحبًا بك! الرجاء تسجيل الدخول للمتابعة .",
+  "Email":"البريد الالكتروني",
+  "password":"كلمه المرور"
+
+
+
+
+
+
+
+  
+
 
 
 }

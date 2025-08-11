@@ -19,6 +19,7 @@ body {
   margin: auto;
 }
 
+
 .dropdown-login {
   color: #343a4099;
   font-size: 20px;
@@ -240,6 +241,14 @@ body {
   right: 15px;
   font-size: 17px;
 }
+[dir="ltr"] .back a{
+    text-decoration: none;
+  color: black;
+  position: relative;
+  bottom: 70px;
+  right: -15px;
+  font-size: 17px;
+}
 
 .main-sidebar {
   background-color: #ffffff;
@@ -255,6 +264,10 @@ body {
   width: 100px;
   left: 25px;
 }
+  [dir="ltr"] .sidebar img {
+    right: 25px;
+    left: auto;
+  }
 .sidebar {
   min-height: 20vh;
   background-color: #ffffff;
@@ -365,6 +378,10 @@ body {
   font-weight: bold;
   margin-right: 50px;
 }
+[dir="ltr"] .adding h6 ,.text-muted {
+  font-weight: bold;
+  margin-left: 50px;
+}
 .text-muted {
   margin-right: 50px;
   color: #343a40cc;
@@ -457,7 +474,7 @@ td {
 .add {
   background-color: white;
   border: 1px solid #4caf504d;
-  padding: 8px;
+  padding: 5px;
   border-radius: 7px;
   color: #4caf50;
 }
@@ -560,6 +577,10 @@ td {
 [dir="rtl"] .input-row input {
   direction: rtl;
 }
+
+.add:hover{
+  background-color: #78cb9a8c;
+}
 /* --------------------------------- */
 body {
  
@@ -640,7 +661,8 @@ body {
  .f-t label{
   margin: 10px;
   color: 
-  #276cc7;
+  #6683a9;
+  
 
 }
 
@@ -659,10 +681,10 @@ body {
   position: absolute;
 }
 .search-box i {
-  position: relative;
+ position: relative;
   top: 10px;
-  right: 10px;
-  font-size: 20px;
+  right: 1px;
+  font-size: 18px;
 }
 
 .search-box::before {
@@ -711,12 +733,13 @@ tbody tr:nth-child(even) {
 .detals {
   text-decoration: none;
   border: 1px solid #ccc;
-  padding: 8px;
-  margin: 20px;
+  padding: 5px;
+  margin: 5px;
   border-radius: 5px;
   cursor: pointer;
   background-color: white;
   font-size: 14px;
+  display: inline-block;
 }
 
 .edit {
@@ -724,13 +747,14 @@ tbody tr:nth-child(even) {
 
   border: 1px solid #607d8b;
   color: #607d8b;
-  padding: 8px;
-  margin: 10px;
+  padding: 5px;
+  margin: 5px;
   border-radius: 5px;
   cursor: pointer;
   background-color: white;
   font-size: 14px;
   align-self: start;
+  display: inline-block;
 
 }
 
@@ -814,7 +838,7 @@ tbody tr:nth-child(even) {
 }
 
 button:hover {
-  background-color: white;
+  background-color: #043A74;
 }
 /* -----------------details---------------------- */
 body {
@@ -853,6 +877,7 @@ tr:nth-child(even) {
 .section-title {
   /* text-align: right; */
   font-weight: bold;
+  font-size: 20px;
   /* margin: 15px; */
 }
 /* -------------------------------------------- */
@@ -994,6 +1019,7 @@ body {
   .sidebar img {
     width: 60px;
   }
+
   .main-sidebar {
     width: 150px;
   }

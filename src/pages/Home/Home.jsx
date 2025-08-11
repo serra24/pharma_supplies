@@ -1,7 +1,11 @@
 import slider2 from "../../assets/img/Rectangle 34625769.png";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
+import { useLang } from "../../context/LanguageContext";
 const Home = () => {
+     const { t } = useLang();
+  
   return (
+
     <div>
       <>
         {/* Main Content */}
@@ -16,11 +20,9 @@ const Home = () => {
             <div className="carousel-inner" >
               <div className="carousel-item active">
                 <div className="text p-4 text-white rounded ">
-                  <h4>بورتال الأدوية - من تطوير شركة إيكاد</h4>
+                  <h4>{t.MedicinesPortalDevelopedbyEkad}</h4>
                   <p>
-                    تقدم شركة إيكاد من خلال بوابة الأدوية منصة ذكية تدعم شركات
-                    الأدوية والموزعين في إدارة عمليات التسعير والمتابعة بكل
-                    احترافية وسهولة.
+                    {t.all}
                   </p>
                 </div>
               </div>
@@ -50,10 +52,10 @@ const Home = () => {
                     ></i>
                   <div className="adding">
                    
-                    <h6 >إضافة فاكس جديد </h6>
-                  <p className="text-muted ">إنشاء فاكس جديد</p>
-                  <a className=" botton" href="/AddNew">
-                    إنشاء فاكس جديد
+                    <h6 >{t.Addanewfax} </h6>
+                  <p className="text-muted ">{t.Createanewfax}</p>
+                  <a className=" botton w-80" href="/AddNew">
+                        {t.Createanewfax}
                   </a>
                   </div>
                     
@@ -68,14 +70,14 @@ const Home = () => {
                      style={{ fontSize: "35px",position: "relative",top: "10px" }}
                       class="fa-solid fa-newspaper "
                     ></i>
-                    <div className="adding"><h6>
-                    عروض الفاكسات{" "}
+                    <div className="adding">
+                     <h6> {t.Faxoffers} {" "}
                    
                   </h6>
-                  <p className="text-muted">استعراض جميع عروض الفاكسات</p>
+                  <p className="text-muted"> {t.Viewallfaxoffers} </p>
                     <a className="botton" href="/show">
                     {" "}
-                    عروض الفاكسات
+                    {t.Faxoffers} 
                   </a>
                   </div>
                   

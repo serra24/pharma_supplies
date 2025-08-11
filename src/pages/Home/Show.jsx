@@ -1,6 +1,8 @@
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
+import { useLang } from "../../context/LanguageContext";
 
 const Show = () => {
+  const { t } = useLang();
   
 
   return (
@@ -10,15 +12,15 @@ const Show = () => {
         {/* Filters Section */}
   <div className="filters">
      <div className="search-box">
-      <input type="text" placeholder=" يمكنك البحث برقم العرض أو الوصف." /><i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder={t.search}  /><i class="fa-solid fa-magnifying-glass"></i>
     </div>
     <div className="datee">
       <div className="f-t">
-        <label htmlFor="" id="date" >  من تاريخ</label>
+        <label htmlFor="" id="date" > {t.Fromdate} </label>
         <input type="date" id="date"  placeholder=":من تاريخ" />
       </div>
        <div className="f-t">
-           <label htmlFor="" id="date">   الي تاريخ </label>
+           <label htmlFor="" id="date"> {t.todate}  </label>
      <input type="date" id="date"  placeholder=":الي تاريخ" />
        </div>
 
@@ -48,32 +50,32 @@ const Show = () => {
         <td>2 - 8 - 2025</td>
         <td>عرض فاکس للأدوية الأساسية</td>
         <td className="actions">
-          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  تفاصيل</a>
-<a href="/Edit"  className="edit"><i class=" con fa-solid fa-pen-to-square"></i>  تعديل </a>        </td>
+          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  {t.details}</a>
+<a href="/Edit"  className="edit"><i class=" con fa-solid fa-pen-to-square"></i>  {t.edite} </a>        </td>
       </tr>
       <tr>
         <td>3718</td>
         <td>2 - 8 - 2025</td>
         <td>عرض فاکس للأدوية الأساسية</td>
         <td className="actions">
-          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  تفاصيل</a>
-<a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  تعديل </a>        </td>
+          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  {t.details}</a>
+<a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  {t.edite} </a>        </td>
       </tr>
       <tr>
         <td>3718</td>
         <td>2 - 8 - 2025</td>
         <td>عرض فاکس للأدوية الأساسية</td>
         <td className="actions">
-      <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  تفاصيل</a>     
-<a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  تعديل </a>        </td>
+      <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  {t.details}</a>     
+<a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  {t.edite} </a>        </td>
       </tr>
       <tr>
         <td>3718</td>
         <td>2 - 8 - 2025</td>
         <td>عرض فاکس للأدوية الأساسية</td>
         <td className="actions">
-          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  تفاصيل</a>
-          <a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  تعديل </a>
+          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  {t.details}</a>
+          <a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  {t.edite} </a>
         </td>
       </tr>
       <tr>
@@ -81,8 +83,8 @@ const Show = () => {
         <td>2 - 8 - 2025</td>
         <td>عرض فاکس للأدوية الأساسية</td>
         <td className="actions">
-          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  تفاصيل</a>
-         <a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  تعديل </a>
+          <a href="/Details" className="detals"><i class="fa-solid fa-eye"></i>  {t.details}</a>
+         <a href="/Edit"  className="edit"><i class="fa-solid fa-pen-to-square"></i>  {t.edite} </a>
         </td>
       </tr>
       {/* Add more rows as needed */}
