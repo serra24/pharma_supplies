@@ -8,7 +8,7 @@ const Details = () => {
         <>
           <BreadCrumb title="" />
           <div className="back">
-                    <a href="/Show">{t.BacktoFaxes} <i class="fa-solid fa-caret-right"></i> </a>
+                    <a href="/Show"> <i class="fa-solid fa-right-long"></i> {t.BacktoFaxes} </a>
 
           </div>
 

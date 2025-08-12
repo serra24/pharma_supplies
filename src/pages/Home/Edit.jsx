@@ -9,7 +9,7 @@ const Edit = () => {
        
         <BreadCrumb title="" />
         <div className="back">
-                    <a href="/Show">{t.BacktoFaxes} <i class="fa-solid fa-caret-right"></i></a>
+                    <a href="/Show"> <i class="fa-solid fa-right-long"></i> {t.BacktoFaxes} </a>
 
           </div>
  
@@ -54,96 +54,105 @@ const Edit = () => {
       <tbody>
         <tr>
           <td >
-            <h6>3781</h6>
+            <input type="text" class="custom-input" value="3718" readonly/>              
           </td>
           <td>
-            <h6>ابيتينس أقراص</h6>
+                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
           </td>
           <td>
-            <h6>6.7</h6>
-          </td>
-          <td>
-            <h6>38</h6>
-          </td>
-          <td>
-            <button className="btn w-50 btn-outline-danger">
-                      <i class="bi bi-x-circle-fill"></i> {t.delete}
-                    </button>
-          </td>
-        </tr>
-        <tr>
-          <td >
-            <h6>3781</h6>
-          </td>
-          <td>
-            <h6>ابيتينس أقراص</h6>
-          </td>
-          <td>
-            <h6>6.7</h6>
-          </td>
-          <td>
-            <h6>38</h6>
-          </td>
-          <td>
-            <button className="btn w-50 btn-outline-danger">
-                      <i class="bi bi-x-circle-fill"></i> {t.delete}
-                    </button>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <h6>3781</h6>
-          </td>
+                        <input type="text" class="custom-input" value="6.7" readonly/>              
 
-          <td>
-            <h6>ابيتينس أقراص</h6>
           </td>
           <td>
-            <h6>6.7</h6>
+                           <input type="text" class="custom-input" value="38" readonly/>              
+
           </td>
           <td>
-            <h6>38</h6>
-          </td>
-          <td>
-            <button className="btn w-50 btn-outline-danger">
+            <button className="btn w-100 btn-outline-danger">
                       <i class="bi bi-x-circle-fill"></i> {t.delete}
                     </button>
           </td>
         </tr>
         <tr>
           <td >
-            <h6>3781</h6>
+            <input type="text" class="custom-input" value="3718" readonly/>              
           </td>
           <td>
-            <h6>ابيتينس أقراص</h6>
+                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
           </td>
           <td>
-            <h6>6.7</h6>
+                        <input type="text" class="custom-input" value="6.7" readonly/>              
+
           </td>
           <td>
-            <h6>38</h6>
+                           <input type="text" class="custom-input" value="38" readonly/>              
+
           </td>
           <td>
-            <button className="btn w-50 btn-outline-danger">
+            <button className="btn w-100 btn-outline-danger">
                       <i class="bi bi-x-circle-fill"></i> {t.delete}
                     </button>
           </td>
         </tr>
         <tr>
-          <td>
-            <h6>3781</h6>
+          <td >
+            <input type="text" class="custom-input" value="3718" readonly/>              
           </td>
           <td>
-            <h6>ابيتينس أقراص</h6>
+                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
           </td>
           <td>
-            <h6>6.7</h6>
+                        <input type="text" class="custom-input" value="6.7" readonly/>              
+
           </td>
           <td>
-            <h6>38</h6>
+                           <input type="text" class="custom-input" value="38" readonly/>              
+
           </td>
           <td>
-            <button className="btn w-50 btn-outline-danger">
+            <button className="btn w-100 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <input type="text" class="custom-input" value="3718" readonly/>              
+          </td>
+          <td>
+                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
+          </td>
+          <td>
+                        <input type="text" class="custom-input" value="6.7" readonly/>              
+
+          </td>
+          <td>
+                           <input type="text" class="custom-input" value="38" readonly/>              
+
+          </td>
+          <td>
+            <button className="btn w-100 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <input type="text" class="custom-input" value="3718" readonly/>              
+          </td>
+          <td>
+                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
+          </td>
+          <td>
+                        <input type="text" class="custom-input" value="6.7" readonly/>              
+
+          </td>
+          <td>
+                           <input type="text" class="custom-input" value="38" readonly/>              
+
+          </td>
+          <td>
+            <button className="btn w-100 btn-outline-danger">
                       <i class="bi bi-x-circle-fill"></i> {t.delete}
                     </button>
           </td>

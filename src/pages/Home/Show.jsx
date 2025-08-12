@@ -48,7 +48,7 @@ const Show = () => {
               <tr>
                 <td>3718</td>
                 <td>2 - 8 - 2025</td>
-                <td>عرض فاکس للأدوية الأساسية</td>
+                <td>عرض فاكس للأدوية الاساسية</td>
                 <td className="actions">
                   <a href="/Details" className="detals">
                     <i class="fa-solid fa-eye"></i> {t.details}
@@ -59,7 +59,7 @@ const Show = () => {
                 </td>
               </tr>
               <tr>
-                <td>3718</td>
+                <td>3781</td>
                 <td>2 - 8 - 2025</td>
                 <td>عرض فاکس للأدوية الأساسية</td>
                 <td className="actions">
