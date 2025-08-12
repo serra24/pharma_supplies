@@ -12,9 +12,13 @@ const newpass = () => {
         <>
         <BreadCrumb title={t.changepassword}  />
         <div className="password-change-form col-lg-6 col-md-4 col-sm-2">
-  <h2>
+          <div className="up-pass">
+
+               <h2>
     <i class="fa-solid fa-lock"></i> {t.changepassword}
   </h2>
+          </div>
+  
   <form>
     <div className="form-group">
       <label htmlFor="current-password"> {t.CurrentPassword} </label>

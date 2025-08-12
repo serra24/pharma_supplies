@@ -32,9 +32,9 @@ const Show = () => {
           </div>
         </div>
 
-        <div  className=" table-container section-title  col-lg-12 col-md-10 col-sm-6  flex: 1 1 0%; ">
+        <div  className=" section-title  col-lg-12 col-md-10 col-sm-6  flex: 1 1 0%; ">
           {/* Table */}
-          <table>
+          <table className="table-container">
             <thead>
               <tr>
                 <th>{t.code} </th>

@@ -66,10 +66,9 @@ const Edit = () => {
             <h6>38</h6>
           </td>
           <td>
-            <button className="btn btn-outline-danger">
-              حذف
-              <i className="fa-solid fa-xmark" />{" "}
-            </button>
+            <button className="btn w-50 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
           </td>
         </tr>
         <tr>
@@ -86,9 +85,9 @@ const Edit = () => {
             <h6>38</h6>
           </td>
           <td>
-            <button className="btn btn-outline-danger">
-              حذف <i className="fa-solid fa-xmark" />
-            </button>
+            <button className="btn w-50 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
           </td>
         </tr>
         <tr>
@@ -106,9 +105,9 @@ const Edit = () => {
             <h6>38</h6>
           </td>
           <td>
-            <button className="btn btn-outline-danger">
-              حذف <i className="fa-solid fa-xmark" />
-            </button>
+            <button className="btn w-50 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
           </td>
         </tr>
         <tr>
@@ -125,10 +124,9 @@ const Edit = () => {
             <h6>38</h6>
           </td>
           <td>
-            <button className="btn btn-outline-danger">
-              حذف
-              <i className="fa-solid fa-xmark" />
-            </button>
+            <button className="btn w-50 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
           </td>
         </tr>
         <tr>
@@ -145,9 +143,9 @@ const Edit = () => {
             <h6>38</h6>
           </td>
           <td>
-            <button className="btn btn-outline-danger">
-              حذف <i className="fa-solid fa-xmark" />
-            </button>
+            <button className="btn w-50 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
           </td>
         </tr>
       </tbody>

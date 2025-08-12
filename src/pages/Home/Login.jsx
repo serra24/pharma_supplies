@@ -44,7 +44,7 @@ const Login = () => {
               <div className="left-side ">
                 <div>
                   <div className="text">
-                    <img className="imge" src="img/Vector.svg" alt="" />
+                    {/* <img className="imgee" src="../../assets/img/Rectangle 20.png" alt="" /> */}
                     <div className="hii">
                       {/* {t.Login} */}
                       <i class="fa-solid fa-user"></i>
@@ -94,7 +94,7 @@ const Login = () => {
                 </div>
               </div>
               <div className="right-side ">
-                <div>
+                <div className="imgge">
                   <img id="image0_2050_9" src={slider4} />
                 </div>
               </div>

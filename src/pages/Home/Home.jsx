@@ -31,13 +31,13 @@ const Home = () => {
               </div>
             </div>
             <div className="carousel-indicators">
-              <button
+              {/* <button
                 type="button"
                 data-bs-target="#mainCarousel"
                 data-bs-slide-to={0}
                 className="active"
                 aria-current="true"
-              />
+              /> */}
             </div>
           </div>
           {/* Action Cards */}

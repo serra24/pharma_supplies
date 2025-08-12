@@ -37,16 +37,17 @@ const Sidebar = () => {
             </div>
 
             <div className="right-side main-sidebar">
-              <NavLink to="/" end>
+             
+              <NavLink to="/" end className="up">
                 <HomeIcon /> {t.home}
               </NavLink>
-              <NavLink to="/AddNew">
+              <NavLink to="/AddNew" className="upp">
                 <PostAddIcon /> {t.addFax}
               </NavLink>
-              <NavLink to="/Show">
+              <NavLink to="/Show" className="uppp">
                 <ArticleIcon /> {t.showFax}
               </NavLink>
-              <NavLink to="/NewPass">
+              <NavLink to="/NewPass" className="upppp">
                 <LockIcon /> {t.changePassword}
               </NavLink>
               <NavLink to="/Login" className="logout">

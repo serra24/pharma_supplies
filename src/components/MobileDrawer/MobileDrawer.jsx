@@ -57,7 +57,8 @@ const MobileDrawer = () => {
             width: 250,
             backgroundColor: '#043A74', // main color
             color: '#fff',
-            direction: dir
+            direction: dir,
+            
           }
         }}
       >

@@ -13,9 +13,9 @@ const BreadCrumb = ({ title }) => {
       {/* Header */}
       <div className="header d-flex justify-content-between align-items-center">
         {/* Language dropdown */}
-        <div className="dropdown">
+        <div className="dropdown ">
           <button
-            className="btn dropdown-toggle"
+            className=" btn dropdown-toggle "
             type="button"
             data-toggle="dropdown"
             aria-expanded="false"
