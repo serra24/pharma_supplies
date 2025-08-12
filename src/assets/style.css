@@ -232,6 +232,7 @@ body {
 .title a {
   text-decoration: none;
   color: black;
+  font-weight: 500;
 }
 .back a {
   text-decoration: none;
@@ -276,6 +277,9 @@ body {
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   width: 200px;
+}
+.right-side a{
+  font-weight: 500;
 }
 
 .right-side .logout {
@@ -773,7 +777,7 @@ tbody tr:nth-child(even) {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 500px;
+  width: 600px;
   margin: auto;
   margin-top: 100px;
 }
@@ -1042,6 +1046,9 @@ body {
   .actions a{
     display: flex;
     margin-right: 20px;
+  }
+  .password-change-form h2{
+    width: 150px;
   }
 
 }
