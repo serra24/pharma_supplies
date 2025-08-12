@@ -52,7 +52,7 @@ const Home = () => {
         <div className="adding">
           <h6>{t.Addanewfax}</h6>
           <p className="text-muted">{t.Createanewfax}</p>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div >
             <a className="botton w-80" href="/AddNew">
               {t.Createanewfax}
             </a>
@@ -70,7 +70,7 @@ const Home = () => {
         <div className="adding">
           <h6>{t.Faxoffers}</h6>
           <p className="text-muted">{t.Viewallfaxoffers}</p>
-          <div style={{ display: "flex", justifyContent: "center" }}>
+          <div>
             <a className="botton" href="/show">
               {t.Faxoffers}
             </a>
