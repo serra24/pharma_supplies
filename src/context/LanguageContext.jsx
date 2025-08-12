@@ -12,18 +12,23 @@ export const LanguageProvider = ({ children }) => {
   const [lang, setLang] = useState('ar');
   const [dir, setDir] = useState('rtl');
 
-// Load saved language from localStorage and set direction
+  // Always set initial direction
   useEffect(() => {
     const savedLang = localStorage.getItem(LOCAL_KEY);
-    if (savedLang) {
-      setLang(savedLang);
-      const newDir = savedLang === 'ar' ? 'rtl' : 'ltr';
-      setDir(newDir);
-      document.documentElement.dir = newDir;
+    const initialLang = savedLang || 'ar';
+    const initialDir = initialLang === 'ar' ? 'rtl' : 'ltr';
+
+    setLang(initialLang);
+    setDir(initialDir);
+    document.documentElement.dir = initialDir;
+
+    // Save default if first time
+    if (!savedLang) {
+      localStorage.setItem(LOCAL_KEY, 'ar');
     }
   }, []);
 
- const switchLang = (newLang) => {
+  const switchLang = (newLang) => {
     setLang(newLang);
     const newDir = newLang === 'ar' ? 'rtl' : 'ltr';
     setDir(newDir);
@@ -39,5 +44,6 @@ export const LanguageProvider = ({ children }) => {
     </LanguageContext.Provider>
   );
 };
+
 
 export const useLang = () => useContext(LanguageContext);
