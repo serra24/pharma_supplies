@@ -1,0 +1,13 @@
+### Login Request
+
+POST http://38.170.230.82:2948/api/Account/Login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "UserName": "ekad",
+  "Password": "Ekad123",
+  "Type": 0,
+  "DeviceId": "string",
+  "FCM_Token": "string"
+}

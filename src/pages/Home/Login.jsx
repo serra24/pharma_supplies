@@ -1,14 +1,53 @@
 import slider4 from "../../assets/img/Rectangle 20.png";
 import { useNavigate } from "react-router-dom";
 import { useLang } from "../../context/LanguageContext";
+import HttpsIcon from "@mui/icons-material/Https";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../redux/slices/authSlice";
+import { useState } from "react";
+
 
 const Login = () => {
-
   const navigate = useNavigate();
-  function handleSubmit(e) {
-    e.preventDefault();
-    navigate("/");
+  const dispatch = useDispatch();
+  // state for inputs
+  const [email, setEmail] = useState("");
+  const [pass, setPass] = useState("");
+  const [ eeror,setError] = useState("");
+function handleSubmit(e) {
+  e.preventDefault();
+  if (!email || !pass) {
+    alert ("entre your data")
+    return;
   }
+
+  setError("");
+
+  dispatch(
+    loginUser({
+      UserName: email,
+      Password: pass,
+      Type: 0,
+      DeviceId: "string",
+      FCM_Token: "string",
+    })
+  )
+    .unwrap()
+    .then((res) => {
+      console.log("res",res);
+      
+
+      navigate("/");
+    })
+    .catch((err) => {
+      console.error("Login failed:", err);
+      setError("❌ فشل تسجيل الدخول");
+    });
+}
+
+    
+  
 
   const { lang, switchLang, t } = useLang();
   const handleLangChange = () => {
@@ -16,6 +55,7 @@ const Login = () => {
     switchLang(newLang);
     window.location.reload();
   };
+
 
   return (
     <div>
@@ -49,9 +89,7 @@ const Login = () => {
                       {/* {t.Login} */}
                       <i class="fa-solid fa-user"></i>
                       <h3>{t.login}</h3>
-                      <h6 className=" text-muted">
-                        {t.welcome}
-                      </h6>
+                      <h6 className=" text-muted">{t.welcome}</h6>
                     </div>
                   </div>
                   <h5 id="result" />
@@ -63,32 +101,51 @@ const Login = () => {
                   >
                     <div className="input position-relative ">
                       <label className="put" htmlFor="">
-                              {t.Email}                      </label>
+                        {t.Email}{" "}
+                      </label>
                       <br />
+
                       <input
                         className="input-log form-control p-2"
-                        type="email"
+                        // type="email"
                         name="email"
                         id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
-                      <i className="iconn fa-regular fa-user position-absolute" />
+                      <PersonOutlineOutlinedIcon
+                        sx={{
+                          position: "absolute",
+                          bottom: 10,
+                          right: 10,
+                        }}
+                      />
                     </div>
-                  <div className="input position-relative ">
+                    <div className="input position-relative ">
                       <label className="put" htmlFor="">
-                                   {t.password}         </label>
+                        {t.password}{" "}
+                      </label>
                       <br />
                       <input
                         className="input-log form-control p-2"
-                        type="email"
-                        name="email"
-                        id="email"
+                        type="password"
+                        name="pass"
+                        id="pass"
+                        value={pass}
+                        onChange={(e) => setPass(e.target.value)}
                       />
-                      <i class="iconn fa-solid fa-lock  position-absolute"></i>
+                      <HttpsIcon
+                        sx={{
+                          position: "absolute",
+                          bottom: 10,
+                          right: 10,
+                        }}
+                      />
                     </div>
-                    <input
+                    <input 
                       type="submit"
                       value={t.login}
-                      className="bottom   btn-block"
+                      className="bottom  btn-block"
                     />
                   </form>
                 </div>
@@ -104,5 +161,6 @@ const Login = () => {
       </>
     </div>
   );
+  
 };
 export default Login;

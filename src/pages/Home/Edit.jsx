@@ -54,38 +54,17 @@ const Edit = () => {
       <tbody>
         <tr>
           <td >
-            <input type="text" class="custom-input" value="3718" readonly/>              
+            <input type="text" class="custom-input" placeholder="3718"/>              
           </td>
           <td>
-                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
+                                <input type="text" class="custom-input" placeholder="ابيتينس أقراص" />              
           </td>
           <td>
-                        <input type="text" class="custom-input" value="6.7" readonly/>              
+                        <input type="text" class="custom-input" placeholder="6.7" />              
 
           </td>
           <td>
-                           <input type="text" class="custom-input" value="38" readonly/>              
-
-          </td>
-          <td>
-            <button className="btn w-100 btn-outline-danger">
-                      <i class="bi bi-x-circle-fill"></i> {t.delete}
-                    </button>
-          </td>
-        </tr>
-        <tr>
-          <td >
-            <input type="text" class="custom-input" value="3718" readonly/>              
-          </td>
-          <td>
-                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
-          </td>
-          <td>
-                        <input type="text" class="custom-input" value="6.7" readonly/>              
-
-          </td>
-          <td>
-                           <input type="text" class="custom-input" value="38" readonly/>              
+                           <input type="text" class="custom-input" placeholder="38" />              
 
           </td>
           <td>
@@ -96,38 +75,17 @@ const Edit = () => {
         </tr>
         <tr>
           <td >
-            <input type="text" class="custom-input" value="3718" readonly/>              
+            <input type="text" class="custom-input" placeholder="3718" />              
           </td>
           <td>
-                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
+                                <input type="text" class="custom-input" placeholder="ابيتينس أقراص" />              
           </td>
           <td>
-                        <input type="text" class="custom-input" value="6.7" readonly/>              
+                        <input type="text" class="custom-input" placeholder="6.7" />              
 
           </td>
           <td>
-                           <input type="text" class="custom-input" value="38" readonly/>              
-
-          </td>
-          <td>
-            <button className="btn w-100 btn-outline-danger">
-                      <i class="bi bi-x-circle-fill"></i> {t.delete}
-                    </button>
-          </td>
-        </tr>
-        <tr>
-          <td >
-            <input type="text" class="custom-input" value="3718" readonly/>              
-          </td>
-          <td>
-                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
-          </td>
-          <td>
-                        <input type="text" class="custom-input" value="6.7" readonly/>              
-
-          </td>
-          <td>
-                           <input type="text" class="custom-input" value="38" readonly/>              
+                           <input type="text" class="custom-input" placeholder="38" />              
 
           </td>
           <td>
@@ -138,17 +96,59 @@ const Edit = () => {
         </tr>
         <tr>
           <td >
-            <input type="text" class="custom-input" value="3718" readonly/>              
+            <input type="text" class="custom-input" placeholder="3718" />              
           </td>
           <td>
-                                <input type="text" class="custom-input" value="ابيتينس أقراص" readonly/>              
+                                <input type="text" class="custom-input" placeholder="ابيتينس أقراص" />              
           </td>
           <td>
-                        <input type="text" class="custom-input" value="6.7" readonly/>              
+                        <input type="text" class="custom-input" placeholder="6.7" />              
 
           </td>
           <td>
-                           <input type="text" class="custom-input" value="38" readonly/>              
+                           <input type="text" class="custom-input" placeholder="38" />              
+
+          </td>
+          <td>
+            <button className="btn w-100 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <input type="text" class="custom-input" placeholder="3718" />              
+          </td>
+          <td>
+                                <input type="text" class="custom-input" placeholder="ابيتينس أقراص" />              
+          </td>
+          <td>
+                        <input type="text" class="custom-input" placeholder="6.7" />              
+
+          </td>
+          <td>
+                           <input type="text" class="custom-input" placeholder="38" />              
+
+          </td>
+          <td>
+            <button className="btn w-100 btn-outline-danger">
+                      <i class="bi bi-x-circle-fill"></i> {t.delete}
+                    </button>
+          </td>
+        </tr>
+        <tr>
+          <td >
+            <input type="text" class="custom-input" placeholder="3718" />              
+          </td>
+          <td>
+                                <input type="text" class="custom-input" placeholder="ابيتينس أقراص" />              
+          </td>
+          <td>
+                        <input type="text" class="custom-input" placeholder="6.7" />              
+
+          </td>
+          <td>
+                           <input type="text" class="custom-input" placeholder="38" />              
 
           </td>
           <td>

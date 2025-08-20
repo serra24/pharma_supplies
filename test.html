@@ -1,0 +1,41 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch Login API</title>
+</head>
+<body>
+  <h2>Login API Call</h2>
+
+  <button id="sendBtn">Send Login Request</button>
+
+  <h3>Response:</h3>
+  <pre id="responseBox"></pre>
+
+  <script>
+    document.getElementById("sendBtn").addEventListener("click", async () => {
+      try {
+        const response = await fetch("http://38.170.230.82:2948/api/Account/Login", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+          },
+          body: JSON.stringify({
+            UserName: "ekad",
+            // Password: "Ekad123",
+            Type: 0,
+            DeviceId: "string",
+            FCM_Token: "string"
+          })
+        });
+
+        const data = await response.json();
+        document.getElementById("responseBox").textContent = JSON.stringify(data, null, 2);
+      } catch (error) {
+        document.getElementById("responseBox").textContent = "Error: " + error;
+      }
+    });
+  </script>
+</body>
+</html> -->

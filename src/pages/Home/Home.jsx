@@ -25,7 +25,7 @@ const Home = () => {
                     {t.all}
                   </p>
                 </div>
-              </div>
+              </div>  
               <div className="main-img">
                 <img src={slider2} alt="" />
               </div>

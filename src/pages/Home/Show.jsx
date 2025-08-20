@@ -1,18 +1,29 @@
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import { useLang } from "../../context/LanguageContext";
+import SearchIcon from '@mui/icons-material/Search';
 
 const Show = () => {
-  const { t } = useLang();
+  const { t,dir } = useLang();
 
   return (
     <div>
       <>
         <BreadCrumb title="عروض الفاكسات" />
         {/* Filters Section */}
-        <div className="filters">
-          <div className="search-box">
-            <input type="text" placeholder={t.search} />
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <div className="filters position-relative">
+          <div className="search-box  ">
+            <input   type="text" placeholder={t.search}  />
+            <SearchIcon className="search-iconn" sx={{
+              position:"absolute",
+                        //  bottom:10,
+                        top:10,
+              
+                           [dir === 'rtl' ? 'right' : 'left']: 5,
+                           [dir === 'ltr' ? 'right' : 'left']: 5,
+                         color:'#343A4080',
+                        
+            }}/>
+            
           </div>
           <div className="datee">
             <div className="f-t">

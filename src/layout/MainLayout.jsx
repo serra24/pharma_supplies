@@ -7,7 +7,7 @@ import { useLang } from '../context/LanguageContext';
 import { useEffect } from 'react';
 
 const MainLayout = () => {
-  const { dir,lang } = useLang();
+  const { lang } = useLang();
   const isLargeScreen = useMediaQuery('(min-width:1024px)');
  const theme = createTheme({
     typography: {

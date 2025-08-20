@@ -1,6 +1,8 @@
 
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import { useLang } from "../../context/LanguageContext";
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 
 const newpass = () => {
        // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -22,17 +24,41 @@ const newpass = () => {
   <form>
     <div className="form-group">
       <label htmlFor="current-password"> {t.CurrentPassword} </label>
-      <input type="password" id="current-password" name="current-password"  /><span className="icon"><i class="fa-solid fa-eye"></i></span>
+      <input type="password" id="current-password" name="current-password"  /> 
+      <RemoveRedEyeOutlinedIcon  sx={{
+         position:"absolute",
+                         bottom:20,
+                         right:10,
+                         color:'#343A4080',
+
+
+      }}/>
+      
+      
       {/* <span className="visibility-toggle"></span> */}
     </div>
     <div className="form-group">
       <label htmlFor="new-password">{t.NewPassword}</label>
-      <input type="password" id="new-password" name="new-password" /><span className="icon"><i class="fa-solid fa-eye"></i></span>
+      <input type="password" id="new-password" name="new-password" />
+      <RemoveRedEyeOutlinedIcon  sx={{
+         position:"absolute",
+                         bottom:20,
+                         right:10,
+                         color:'#343A4080',
+
+
+      }}/>
       <span className="visibility-toggle"></span>
     </div>
     <div className="form-group">
       <label htmlFor="confirm-password">{t.Confirmnewpassword}</label>
-      <input type="password" id="confirm-password" name="confirm-password" /> <span className="icon"><i class="fa-solid fa-eye-slash"></i> </span>
+      <input type="password" id="confirm-password" name="confirm-password" /> 
+      <VisibilityOffOutlinedIcon sx={{
+         position:"absolute",
+                         bottom:20,
+                         right:10,
+                         color:'#343A4080',
+      }}/>
       <span className="visibility-toggle"></span>
     </div>
     <button className="saving" type="submit">{t.Save}</button>

@@ -2,11 +2,21 @@ import { useState } from "react";
 import BreadCrumb from "../../components/BreadCrumb/BreadCrumb";
 import slider3 from "../../assets/img/Upload icon@2x.png";
 import { useLang } from "../../context/LanguageContext";
+import { saveExcel } from "../../redux/slices/saveslice";
+import axios from "axios";
 
 const AddNew = () => {
   const [activeTab, setActiveTab] = useState("manual");
   const [uploadedFile, setUploadedFile] = useState(null);
+  const [formData, setFormData] = useState({
+      publicId :"{ get; set; }" ,
+    massag: "",
+    data: "",
+  });
+  const [message, setMessage] = useState("");
+
   const { t } = useLang();
+
   const handleFileUpload = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -17,34 +27,55 @@ const AddNew = () => {
   const truncateFileName = (name) => {
     return name.length > 20 ? name.slice(0, 20) + "..." : name;
   };
+
+  // لما يحصل تغيير في أي input
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  // حفظ الداتا للـ API
+  const handleSave = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post("/PreFaxes/SavePreFax");
+      
+      console.log("Response:", response.data);
+    } catch (error) {
+      console.error(" خطأ:", error);
+      
+    }
+  };
+
   return (
     <div>
-      <>
-        <div >
-        <BreadCrumb title={t.addNewFax} />
+      <BreadCrumb title={t.addNewFax} />
 
-        <div className="top-bar d-flex justify-content-between align-items-center col-lg-12 col-md-6 col-sm-3">
-          <button
-            className={activeTab === "manual" ? "active" : ""}
-            onClick={() => setActiveTab("manual")}
-          >
-            {t.manualEntry}
-          </button>
-          <button
-            className={activeTab === "excel" ? "active" : ""}
-            onClick={() => setActiveTab("excel")}
-          >
-            {t.uploadExcelFile}
-          </button>
-        </div>
+      {/* Tabs */}
+      <div className="top-bar d-flex justify-content-between align-items-center col-lg-12 col-md-6 col-sm-3">
+        <button
+          className={activeTab === "manual" ? "active" : ""}
+          onClick={() => setActiveTab("manual")}
+        >
+          {t.manualEntry}
+        </button>
+        <button
+          className={activeTab === "excel" ? "active" : ""}
+          onClick={() => setActiveTab("excel")}
+        >
+          {t.uploadExcelFile}
+        </button>
+      </div>
 
-        {activeTab === "manual" ? (
-          <section
-            className="section-title  col-lg-12 col-md-10 col-sm-6  flex: 1 1 0%; "
-           
-          >
-            <table className="table-container  ">
-              <thead>
+      {/* Manual Tab */}
+      {activeTab === "manual" ? (
+        <section className="section-title col-lg-12 col-md-10 col-sm-6">
+          <table className="table-container">
+            <thead>
                 <tr>
                   <th>{t.code}</th>
                   <th>{t.itemName} </th>
@@ -112,156 +143,120 @@ const AddNew = () => {
                     </button>
                   </td>
                 </tr>
-                {/* Input Row */}
-                <tr className="input-row">
-                  <td>
-                    <input type="text" placeholder={t.code} />
-                  </td>
-                  <td>
-                    <input type="text" placeholder={t.itemName} />
-                  </td>
-                  <td>
-                    <input type="number" placeholder={t.price} />
-                  </td>
-                  <td>
-                    <input type="number" placeholder={t.discount} />
-                  </td>
-                  <td>
-                    <button className=" add w-100">
-                      {" "}
-                      <i class="bi bi-plus-circle-fill"></i> {t.add}
-                    </button>
-                  </td>
-                </tr>
+                
               </tbody>
-            </table>
-          </section>
-        ) : (
-          // Excel Rows
-          // excelData.map((item, index) => (
-          <div
-            className="move"
-            style={{
-              flex: 1,
-              border: "2px dashed #ccc",
-              borderRadius: "8px",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              height: 250,
-              p: 3,
-              textAlign: "center",
-              cursor: "pointer",
-              backgroundColor: "#fff",
-            }}
-            onClick={() => document.getElementById("fileInput").click()}
-          >
-            <img
-              src={slider3}
-              alt="رفع ملف"
-              style={{ width: "68px", marginBottom: "10px", height: "60px" }}
-            />
-
-            <p
-              style={{
-                fontWeight: 700,
-                fontSize: "16px",
-              }}
-            >
-              {t.uploadFile}{" "}
-              <span
-                style={{
-                  color: "#143C7C",
-                  textDecoration: "underline",
-                  fontWeight: 700,
-                  fontSize: 16,
-                }}
-              >
-                Excel
-              </span>
-            </p>
-
-            <p
-              style={{
-                fontSize: "12px",
-                color: "#343A4099",
-                mt: 1,
-              }}
-            >
-              {t.chooseExcelFile}
-            </p>
-
-            <form
-              action="upload.php"
-              method="post"
-              encType="multipart/form-data"
-            >
-              <input
-                id="fileInput"
-                type="file"
-                name="excelFile"
-                accept=".xlsx,.xls"
-                onChange={handleFileUpload}
-                style={{ display: "none" }}
-              />
-            </form>
-
-            {uploadedFile && (
-              <div
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  mt: 2,
-                  width: "100%",
-                  px: 2,
-                }}
-              >
-                <p
-                  sx={{
-                    fontSize: "13px",
-                    color: "#333",
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    maxWidth: "200px",
-                  }}
-                >
-                  {truncateFileName(uploadedFile.name)}
-                </p>
-              </div>
-            )}
-          </div>
-          // ))
-        )}
-
-        <div class="end">
-          <div>
-            <label htmlFor="description">{t.description}</label>
-            <br />
-            <textarea
-              id="description"
-              placeholder={t.descriptionPlaceholder}
-              defaultValue={""}
-            />
-          </div>
-          <div>
-            <label htmlFor="date">{t.todayDate} </label>
-            <br />
-            <input type="date" id="date" defaultValue="2025-08-04" />
-          </div>
+            
+            <tbody>
+              {/* هنا هتضيف صفوف من API لو عندك */}
+              <tr className="input-row">
+                <td>
+                  <input
+                    type="text"
+                    placeholder={t.code}
+                    name="code"
+                    onChange={handleChange}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    placeholder={t.itemName}
+                    name="name"
+                    onChange={handleChange}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    placeholder={t.price}
+                    name="price"
+                    onChange={handleChange}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    placeholder={t.discount}
+                    name="discount"
+                    onChange={handleChange}
+                  />
+                </td>
+                <td>
+                  <button className="add w-100">
+                    <i className="bi bi-plus-circle-fill"></i> {t.add}
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      ) : (
+        // Excel Tab
+        <div
+          className="move"
+          style={{
+            flex: 1,
+            border: "2px dashed #ccc",
+            borderRadius: "8px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 250,
+            cursor: "pointer",
+            backgroundColor: "#fff",
+          }}
+          onClick={() => document.getElementById("fileInput").click()}
+        >
+          <img src={slider3} alt="رفع ملف" style={{ width: "68px", height: "60px" }} />
+          <p>
+            {t.uploadFile}{" "}
+            <span style={{ color: "#143C7C", textDecoration: "underline" }}>Excel</span>
+          </p>
+          <input
+            id="fileInput"
+            type="file"
+            name="excelFile"
+            accept=".xlsx,.xls"
+            onChange={handleFileUpload}
+            style={{ display: "none" }}
+          />
+          {uploadedFile && <p>{truncateFileName(uploadedFile.name)}</p>}
         </div>
-        <input
-          type="submit"
-          className="save-btn"
-          name="save"
-          id="savee"
-          value={t.save}
-        />
+      )}
+
+      {/* Description + Date */}
+      <div className="end">
+        <div>
+          <label htmlFor="description">{t.description}</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder={t.descriptionPlaceholder}
+            onChange={handleChange}
+          />
         </div>
-      </>
+        <div>
+          <label htmlFor="date">{t.todayDate}</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            defaultValue="2025-08-04"
+            onChange={handleChange}
+          />
+        </div>
+      </div>
+
+      {/* زرار الحفظ */}
+      <button onClick={handleSave} className="save-btn">
+        {t.save}
+      </button>
+
+      {/* رسالة */}
+      {message && <p>{}</p>}
     </div>
   );
 };
+
 export default AddNew;
