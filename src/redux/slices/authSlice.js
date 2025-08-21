@@ -1,11 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axiosInstance from "../../api/axiosInstance";
+import { axiosInstancePromise } from "../../api/axiosInstance";
 import {
   setEncryptedCookie,
   getDecryptedCookie,
 } from "../../utils/cryptoUtils";
-import Cookies from "js-cookie"; // Make sure to import Cookies
-
+import Cookies from "js-cookie"; 
 // Define the initial state of the login process
 const initialState = {
   authData: getDecryptedCookie("Data") || null, // Store both user and token together
@@ -21,7 +20,8 @@ export const loginUser = createAsyncThunk(
     console.log("data", data);
 
     try {
-      const instance = await axiosInstance();
+           const instance = await axiosInstancePromise;
+           console.log("instance",instance);
       const response = await instance.post("/api/Account/Login", data, {
         headers: { "Content-Type": "application/json" },
       });

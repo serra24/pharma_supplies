@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import MainLayout from './layout/MainLayout';
 import Home from './pages/Home/Home';
-import AddNew from './pages/Home/AddNew';
+import AddNew from './pages/AddNew/AddNew';
 import Show from './pages/Home/Show';
 import NewPass from './pages/Home/NewPass';
 import Details from './pages/Home/Details';

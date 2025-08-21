@@ -1,13 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import servicesReducer from "./slices/servicesSlice";
 import authReducer from "./slices/authSlice";
-import saveReducer from './slices/saveslice';
+import saveReducer from './slices/preFaxSlice';
 
 const store = configureStore({
   reducer: {
-    services: servicesReducer,
     auth: authReducer,
-    saveExcel:saveReducer,
+    preFax:saveReducer,
   },
 });
 

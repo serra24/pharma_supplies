@@ -1,25 +1,19 @@
 import axios from "axios";
-import loadConfig from "../../configLoader";
+// Global config holder
+export let appConfig = {};
 
-const axiosInstance = async () => {
-  const config = await loadConfig();
-  
-  return axios.create({
-    baseURL: config.baseURL || "http://38.170.230.82:2948", // Use config.json or fallback
-    headers: {
-      "Accept": "application/json",
-      "Content-Type": "application/json",
-    },
+const axiosInstancePromise = fetch("/config.json")
+  .then(res => res.json())
+  .then(config => {
+    appConfig = config; 
+    return axios.create({
+      baseURL: config.API_BASE_URL
+    });
+  })
+  .catch(err => {
+    console.error("Failed to load config.json:", err);
+    appConfig = { CHAIN_ID: 0, ECHANNEL_ID: 0 }; // fallback
+    return axios.create({ baseURL: "http://localhost:3000" });
   });
-};
 
-export default axiosInstance;
-
-
-// import axios from "axios";
-
-// const axiosInstance = axios.create({
-//   baseURL: "/api", 
-// });
-
-// export default axiosInstance;
+export { axiosInstancePromise };
